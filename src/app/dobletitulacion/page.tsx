@@ -5,6 +5,12 @@ import Navbar from "@/components/componentsGeneral/NavBar";
 import SeleccionarCarrera from "@/components/componentsDobletitulacion/SeleccionarCarrera";
 import { planIngAdministrativa } from "@/components/planesEstudio/IngAdministrativa"; 
 import { planIngSistemas } from "@/components/planesEstudio/IngSistemas";
+import { PlanIngCivil } from "@/components/planesEstudio/IngCivil";
+import { planIngQuimica } from "@/components/planesEstudio/IngQuimica";
+import { planIngControl } from "@/components/planesEstudio/IngControl";
+import { planIngPetroleos } from "@/components/planesEstudio/IngPetroleos";
+import { planIngMecanica } from "@/components/planesEstudio/IngMecanica";
+import { PlanIngAmbiental } from "@/components/planesEstudio/IngAmbiental";
 import { compararPlanes, Materia } from "@/components/componentsDobletitulacion/comparadorPlanes";
 import TablaResultado from "@/components/componentsDobletitulacion/TablaResultado";
 
