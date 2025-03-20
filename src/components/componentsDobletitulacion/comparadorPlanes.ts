@@ -8,6 +8,7 @@ export type Materia = {
   periodo?: string;
   calificacion?: string;
   codigoOrigen: string; // ✅ Código de origen
+  nombreOrigen: string;  // ✅ Nombre de origen
 };
 
 import { procesarHistoriaAcademica } from "../componentsGeneral/procesarHistoria";
@@ -42,7 +43,8 @@ export function compararPlanes(
     const materiaTransformada = {
       ...materia,
       codigo: Array.isArray(codigoNuevo) ? codigoNuevo[0] : codigoNuevo, // El código nuevo
-      codigoOrigen: materia.codigo, // Guardamos el código original
+      codigoOrigen: materia.codigo, // ✅ Guardamos el código original
+      nombreOrigen: materia.nombreOrigen, // ✅ Guardamos el nombre original
     };
 
     console.log("🔍 Materia procesada en historiaOrigenConvertida:", materiaTransformada); // 👀 Log para verificar la conversión
@@ -71,13 +73,14 @@ export function compararPlanes(
       ) {
         const resultado = {
           ...asignatura,
-          codigoOrigen: materiaEncontrada.codigoOrigen || "N/A", // ← Guardar el código original
+          codigoOrigen: materiaEncontrada.codigoOrigen || "N/A", // ✅ Guardamos el código original
+          nombreOrigen: materiaEncontrada.nombreOrigen || "N/A", // ✅ Guardamos el nombre original
           codigo: asignatura.codigo, // Código actual del plan de doble titulación
           periodo: materiaEncontrada.periodo || "N/A",
           calificacion: materiaEncontrada.calificacion || "N/A",
         };
 
-        console.log("✅ Resultado Final con código de origen:", resultado); // 👀 Log final antes de regresar la lista de asignaturas
+        console.log("✅ Resultado Final con código y nombre de origen:", resultado); // 👀 Log final antes de regresar la lista de asignaturas
 
         return resultado;
       }

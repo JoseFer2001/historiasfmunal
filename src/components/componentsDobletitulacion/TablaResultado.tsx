@@ -18,6 +18,7 @@ export default function TablaResultado({ asignaturasFaltantes }: TablaResultadoP
           <tr className="bg-gray-200">
             <th className="border p-2">Periodo</th>
             <th className="border p-2">Código de Origen</th>
+            <th className="border p-2">Nombre de Origen</th> {/* ✅ Nueva columna */}
             <th className="border p-2">Código</th>
             <th className="border p-2">Nombre</th>
             <th className="border p-2">Créditos</th>
@@ -27,23 +28,24 @@ export default function TablaResultado({ asignaturasFaltantes }: TablaResultadoP
         </thead>
         <tbody>
           {asignaturasFaltantes.length > 0 ? (
-            asignaturasFaltantes.map((materia) => {
+            asignaturasFaltantes.map((materia, index) => {
               console.log("🔎 Materia en iteración:", materia);
               return (
-                <tr key={materia.codigo}>
+                <tr key={index}> {/* 🔹 Usa `index` como clave única */}
                   <td className="border p-2">{materia.periodo || "N/A"}</td>
-                  <td className="border p-2">{materia.codigoOrigen || "N/A"}</td> {/* Código de origen agregado */}
-                  <td className="border p-2">{materia.codigo}</td>
-                  <td className="border p-2">{materia.nombre}</td>
-                  <td className="border p-2">{materia.creditos}</td>
+                  <td className="border p-2">{materia.codigoOrigen || "N/A"}</td>
+                  <td className="border p-2">{materia.nombreOrigen || "N/A"}</td>
+                  <td className="border p-2">{materia.codigo || "N/A"}</td>
+                  <td className="border p-2">{materia.nombre || "N/A"}</td>
+                  <td className="border p-2">{materia.creditos ?? "N/A"}</td> {/* 🔹 Manejo de números con `??` */}
                   <td className="border p-2">{materia.calificacion || "N/A"}</td>
-                  <td className="border p-2">{materia.tipologia}</td>
+                  <td className="border p-2">{materia.tipologia || "N/A"}</td>
                 </tr>
               );
             })
           ) : (
             <tr>
-              <td colSpan={7} className="border p-2 text-center">
+              <td colSpan={8} className="border p-2 text-center">
                 No hay asignaturas faltantes
               </td>
             </tr>

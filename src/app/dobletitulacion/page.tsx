@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/componentsGeneral/NavBar";
 import SeleccionarCarrera from "@/components/componentsDobletitulacion/SeleccionarCarrera";
 import { compararPlanes, Materia } from "@/components/componentsDobletitulacion/comparadorPlanes";
@@ -22,22 +22,23 @@ export default function DobleTitulacion() {
   const [historiaDoble, setHistoriaDoble] = useState("");
   const [planSeleccionado, setPlanSeleccionado] = useState<Materia[]>(planIngAdministrativa as Materia[]);
   const [resultado, setResultado] = useState<Materia[]>([]);
-  const [carreraSeleccionada, setCarreraSeleccionada] = useState("IngAdministrativa"); // ✅ Ahora guardamos la carrera seleccionada
+  const [carreraSeleccionada, setCarreraSeleccionada] = useState("IngAdministrativa");
 
-  useEffect(() => {
-    console.log("Plan Seleccionado actualizado:", planSeleccionado);
-  }, [planSeleccionado]);
-
-  // ✅ Función para ejecutar la comparación con la carrera correcta
+  // Función para comparar los planes
   const comparar = () => {
     if (!carreraSeleccionada) {
       console.error("No se ha seleccionado ninguna carrera.");
       return;
     }
-
     const asignaturasFaltantes = compararPlanes(historiaOrigen, historiaDoble, planSeleccionado, carreraSeleccionada);
-    console.log("Asignaturas faltantes:", asignaturasFaltantes);
     setResultado(asignaturasFaltantes);
+  };
+
+  // ✅ Función para limpiar los datos
+  const limpiarTodo = () => {
+    setHistoriaOrigen("");
+    setHistoriaDoble("");
+    setResultado([]);
   };
 
   return (
@@ -49,7 +50,7 @@ export default function DobleTitulacion() {
         <div className="mt-4">
           <SeleccionarCarrera 
             setPlanSeleccionado={setPlanSeleccionado} 
-            setCarreraSeleccionada={setCarreraSeleccionada} // ✅ Guardamos la carrera seleccionada
+            setCarreraSeleccionada={setCarreraSeleccionada} 
           />
         </div>
 
@@ -78,13 +79,19 @@ export default function DobleTitulacion() {
           </div>
         </div>
 
-        {/* Botón de Comparación */}
-        <div className="flex justify-center mt-4">
+        {/* Botones de Acción */}
+        <div className="flex justify-center gap-4 mt-4">
           <button
             onClick={comparar}
             className="px-6 py-2 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700"
           >
             Comparar Planes
+          </button>
+          <button
+            onClick={limpiarTodo}
+            className="px-6 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700"
+          >
+            Limpiar Todo
           </button>
         </div>
 
