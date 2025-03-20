@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import TablaPrueba from "@/components/componentsGeneral/TablaPrueba";
-import Navbar from "@/components/componentsGeneral/NavBar";
 import Link from "next/link";
 
 export default function Page() {
@@ -11,7 +10,6 @@ export default function Page() {
   return (
     <div className="p-4">
       {/* Barra de navegación */}
-      <Navbar />
 
       <h1 className="text-2xl font-bold mt-4">Historia Académica</h1>
       <textarea
@@ -28,7 +26,7 @@ export default function Page() {
       <div className="flex justify-center mt-4">
         <Link href="/dobletitulacion">
           <button className="px-6 py-2 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700">
-            Ir a Doble Titulación
+            Ir al comparador de planes
           </button>
         </Link>
       </div>
