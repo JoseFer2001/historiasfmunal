@@ -1,20 +1,29 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "@/components/componentsGeneral/NavBar";
+// import Navbar from "@/components/componentsGeneral/NavBar";
 import SeleccionarCarrera from "@/components/componentsDobletitulacion/SeleccionarCarrera";
 import { compararPlanes, Materia } from "@/components/componentsDobletitulacion/comparadorPlanes";
 import TablaResultado from "@/components/componentsDobletitulacion/TablaResultado";
 
 // Importamos los planes de estudio
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngAdministrativa } from "@/components/planesEstudio/IngAdministrativa"; 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngSistemas } from "@/components/planesEstudio/IngSistemas";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { PlanIngCivil } from "@/components/planesEstudio/IngCivil";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngQuimica } from "@/components/planesEstudio/IngQuimica";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngControl } from "@/components/planesEstudio/IngControl";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngPetroleos } from "@/components/planesEstudio/IngPetroleos";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngMecanica } from "@/components/planesEstudio/IngMecanica";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { PlanIngAmbiental } from "@/components/planesEstudio/IngAmbiental";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { planIngElectrica } from "@/components/planesEstudio/IngElectrica";
 
 export default function DobleTitulacion() {

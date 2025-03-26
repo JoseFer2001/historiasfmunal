@@ -12,11 +12,15 @@ import { PlanIngAmbiental } from "@/components/planesEstudio/IngAmbiental";
 import { planIngElectrica } from "../planesEstudio/IngElectrica";
 
 interface SeleccionarCarreraProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setPlanSeleccionado: (plan: any) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setCarreraSeleccionada: (carrera: string) => void;
 }
 
 // Mapeo de carrera a su respectivo plan de estudios
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const planesPorCarrera: Record<string, any> = {
   IngAdministrativa: planIngAdministrativa,
   IngSistemas: planIngSistemas,
