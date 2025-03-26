@@ -62,5 +62,18 @@ export const planIngQuimica = [
     { codigo: "3010537", nombre: "Gestión de Proyectos de Desarrollo y Metodología General Ajustada", creditos: 3, tipologia: "C - Disciplinar Obligatoria" },
     { codigo: "3010668", nombre: "Proyectos de Innovación y Desarrollo", creditos: 3, tipologia: "C - Disciplinar Obligatoria" },
     { codigo: "3010669", nombre: "Toma de Decisión para el Diseño en Ingeniería", creditos: 3, tipologia: "C - Disciplinar Obligatoria" },
-    { codigo: "3010535", nombre: "Fundamentos de Ciclo de Vida para Ingeniería", creditos: 3, tipologia: "C - Disciplinar Obligatoria" }
+    { codigo: "3010535", nombre: "Fundamentos de Ciclo de Vida para Ingeniería", creditos: 3, tipologia: "C - Disciplinar Obligatoria" },
+    { codigo: "3010430", nombre: "Tópicos Especiales en Termodinámica", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010474", nombre: "Conversión de Energía en Sistemas Termoflídicos", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010472", nombre: "Simulación de Procesos Químicos", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010462", nombre: "Tópicos Especiales en Operaciones Unitarias", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010471", nombre: "Separación de Sistemas Multicomponentes", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010652", nombre: "Análisis de Plantas Industriales", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010477", nombre: "Laboratorio de Control de Procesos", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3011183", nombre: "La Energía en el Tratamiento Sostenible de Aguas", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010674", nombre: "Estrategias de Gestión y Gerencia de Proyectos en Ingeniería", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010537", nombre: "Gestión de Proyectos de Desarrollo y Metodología General Ajustada", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010668", nombre: "Proyectos de Innovación y Desarrollo", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010669", nombre: "Toma de Decisión para el Diseño en Ingeniería", creditos: 3, tipologia: "T - Disciplinar Optativa" },
+    { codigo: "3010535", nombre: "Fundamentos de Ciclo de Vida para Ingeniería", creditos: 3, tipologia: "T - Disciplinar Optativa" }
 ];
